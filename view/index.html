@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>RECONSYS</title>
+    <!-- Adiciona os arquivos do Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        .remedio {
+            margin-top: 20px;
+        }
+
+        .cor-primary {
+            background-color: #007bff;
+        }
+
+        .cor-secondary {
+            background-color: #6c757d;
+        }
+
+        .cor-infos {
+            background-color: #17a2b8;
+        }
+
+        .slot-manha {
+            background-color: #ff5555;
+        }
+
+        .slot-tarde {
+            background-color: #5555ff;
+        }
+
+        .slot-noite {
+            background-color: #55ff55;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sistema de Controle de Remédios</h1>
+        <form>
+            <div class="form-group remedio">
+                <label for="nome-remedio">Nome do Remédio:</label>
+                <input type="text" class="form-control" id="nome-remedio">
+            </div>
+
+            <div class="form-group remedio">
+                <label for="horario-remedio">Horário:</label>
+                <input type="time" class="form-control" id="horario-remedio">
+            </div>
+
+            <div class="form-group remedio">
+                <table id="slots-remedio">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th style="text-align: center;">&emsp;Domingo&emsp;</th>
+                            <th style="text-align: center;">&emsp;Segunda-feira&emsp;</th>
+                            <th style="text-align: center;">&emsp;Terça-feira&emsp;</th>
+                            <th style="text-align: center;">&emsp;Quarta-feira&emsp;</th>
+                            <th style="text-align: center;">&emsp;Quinta-feira&emsp;</th>
+                            <th style="text-align: center;">&emsp;Sexta-feira&emsp;</th>
+                            <th style="text-align: center;">&emsp;Sabado&emsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th style="text-align: center;">&emsp;Manhã&emsp;</th>
+                            <td class="slot-manha" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-manha" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-manha" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-manha" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-manha" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-manha" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-manha" style="text-align: center"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <th style="text-align: center;">&emsp;Tarde&emsp;</th>
+                            <td class="slot-tarde" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-tarde" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-tarde" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-tarde" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-tarde" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-tarde" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-tarde" style="text-align: center"><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <th style="text-align: center;">&emsp;Noite&emsp;</th>
+                            <td class="slot-noite" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-noite" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-noite" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-noite" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-noite" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-noite" style="text-align: center"><input type="checkbox"></td>
+                            <td class="slot-noite" style="text-align: center"><input type="checkbox"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="adicionarRemedio()">Adicionar Remédio</button>
+        </form>
+        <hr>
+        <h2>Lista de Remédios</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome do Remédio</th>
+                    <th>Horário</th>
+                    <th>Dia da Semana</th>
+                    <th>Cor</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="lista-remedios">
+                <!-- Não há remédios adicionados ainda -->
+            </tbody>
+        </table>
+    </div>
+    <script src="index.js" type=""></script>
+</body>
+
+</html>
